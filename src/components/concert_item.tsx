@@ -22,7 +22,7 @@ export const ConcertItem = ({
   capacity,
 }: ConcertItemProps): ReactElement => (
   <div className="concert">
-    <h3>{name}</h3>
+    <h3 className="concert__header">{name}</h3>
     <input type="checkbox" checked={checked} onClick={handleClick} />
   </div>
 );

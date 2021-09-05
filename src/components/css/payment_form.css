@@ -14,14 +14,8 @@
   }
 }
 
-h3, h2 {
+.payment-form__header {
   font-family: 'Montserrat', sans-serif;
-}
-
-h2 {
   letter-spacing: 2px;
 }
 
-h3 {
-  margin: 0;
-}

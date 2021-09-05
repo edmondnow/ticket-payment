@@ -1,8 +1,12 @@
 .concert {
-    display: flex;
-    width: 200px;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
+  display: flex;
+  width: 200px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
-  
+
+.concert__header {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
