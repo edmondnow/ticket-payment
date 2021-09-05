@@ -5,7 +5,7 @@ import {
   getConcertPaymentsURL,
 } from ".";
 
-describe("URL strings are concatenated", () => {
+describe("Endoints URLs are concatenated", () => {
   const concertId = "100";
   const reservationId = "101"
   
@@ -16,7 +16,7 @@ describe("URL strings are concatenated", () => {
   test("concert reservations URL", () => {
     expect(getConcertReservationsURL(concertId, reservationId)).toBe(`${ROOT_URL}/concerts/${concertId}/reservations/${reservationId}`);
   });
-    
+
   test("concert payments URL", () => {
     expect(getConcertPaymentsURL(concertId,reservationId )).toBe(`${ROOT_URL}/concerts/${concertId}/reservations/${reservationId}/payments`);
   });
