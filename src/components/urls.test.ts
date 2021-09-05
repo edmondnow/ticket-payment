@@ -5,7 +5,7 @@ import {
   getConcertPaymentsURL,
 } from ".";
 
-describe("Endoints URLs are concatenated", () => {
+describe("Endpoint URLs are concatenated", () => {
   const concertId = "100";
   const reservationId = "101"
   
