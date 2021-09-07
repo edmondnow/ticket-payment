@@ -1,0 +1,21 @@
+.reservation-form {
+  width: calc(100% - 40px);
+  height: calc(100vh - 40px);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: white;
+}
+
+@media (min-width: 450px) {
+  .reservation-form {
+    width: 350px;
+    height: 450px;
+  }
+}
+
+.reservation-form__header {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+}
+

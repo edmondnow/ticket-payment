@@ -1,10 +1,24 @@
+import { useState } from "react";
 import "./app.css";
-import { PaymentForm } from "./components";
+import { ReservationForm, PaymentForm, ReservationType } from "./components";
 
 function App() {
+  const [reservation, setReservation] = useState<ReservationType | null>();
+  const showPaymentForm = reservation?.status === "Reserved";
+
   return (
     <div className="app-container">
-      <PaymentForm />
+      <div className="forms-container">
+        TicketBeast
+        <ReservationForm setReservation={setReservation} />
+        {showPaymentForm && (
+          <PaymentForm
+            reservationStatus={reservation!.status}
+            reservationId={reservation!.id}
+            concertId={reservation!.concertId}
+          />
+        )}
+      </div>
     </div>
   );
 }
