@@ -27,7 +27,7 @@ export const ReservationForm: FC<ReservationFormProps> = ({
   const [concerts, setConcerts] = useState<ConcertType[] | null>();
   const [selectedConcert, setSelectedConcert] = useState<ConcertType>();
   const [identification, setIdentification] = useState<string>();
-  const [reservationMade, setReservationMade] = useState<string>();
+  const [reservationIdOnPost, setReservationIdOnPost] = useState<string>();
   const numberOfTicketsSelect = [1, 2];
   const [numberOfTickets, setNumberOfTickets] = useState<1 | 2>(1);
 
@@ -35,15 +35,15 @@ export const ReservationForm: FC<ReservationFormProps> = ({
 
   useGetReservations(
     setReservation,
+    reservationIdOnPost,
     selectedConcert?.id,
-    reservationMade,
-    useCallback(() => {}, [reservationMade])
+    useCallback(() => {}, [reservationIdOnPost])
   );
 
   const onClick = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const reservationId = uuidv4();
-    postReservation(selectedConcert!.id, reservationId, setReservationMade, identification!, numberOfTickets);
+    postReservation(selectedConcert!.id, reservationId, setReservationIdOnPost, identification!, numberOfTickets);
   };
 
   const handleSelectChange = (value: string) => {
@@ -61,7 +61,7 @@ export const ReservationForm: FC<ReservationFormProps> = ({
           const handleClick = () => {
             if (!isSelected) setSelectedConcert(concert);
           };
-          
+
           return (
             <ConcertItem
               {...concert}
