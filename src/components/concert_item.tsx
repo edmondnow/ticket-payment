@@ -10,12 +10,12 @@ export type ConcertType = {
 
 interface ConcertItemProps extends ConcertType {
   checked: boolean;
-  handleClick: () => void;
+  onChange: () => void;
 }
 
 export const ConcertItem = ({
   name,
-  handleClick,
+  onChange,
   checked,
   id,
   date,
@@ -23,6 +23,6 @@ export const ConcertItem = ({
 }: ConcertItemProps): ReactElement => (
   <div className="concert">
     <h3 className="concert__header">{name}</h3>
-    <input type="checkbox" checked={checked} onClick={handleClick} />
+    <input type="checkbox" checked={checked} onChange={onChange} />
   </div>
 );
