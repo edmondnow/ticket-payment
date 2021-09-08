@@ -2,6 +2,7 @@ import {
   ROOT_URL,
   getConcertReservationsURL,
   getConcertURL,
+  getConcertPaymentsURL,
 } from "./urls";
 
 describe("Reservation related endpoint URLs are concatenated", () => {
@@ -15,4 +16,11 @@ describe("Reservation related endpoint URLs are concatenated", () => {
   test("concert reservations URL", () => {
     expect(getConcertReservationsURL(concertId, reservationId)).toBe(`${ROOT_URL}/concerts/${concertId}/reservations/${reservationId}`);
   });
+
+  test("concert payments URL", () => {
+    expect(getConcertPaymentsURL(concertId,reservationId )).toBe(`${ROOT_URL}/concerts/${concertId}/reservations/${reservationId}/payments`);
+  });
 });
+
+
+

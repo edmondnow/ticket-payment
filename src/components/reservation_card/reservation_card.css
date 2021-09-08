@@ -1,0 +1,19 @@
+.reservation-card__event-name {
+  font-family: "Montserrat", sans-serif;
+  color: #3e4852;
+  letter-spacing: 1px;
+}
+
+.reservation-card__text-field {
+  margin-top: 20px !important;
+  width: 100%;
+}
+
+.reservation-card__input-label {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.reservation-card__select {
+  margin-bottom: 20px;
+}

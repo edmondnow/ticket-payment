@@ -1,4 +1,4 @@
-.concert {
+.event {
   display: flex;
   height: 50px;
   padding-top: 5px;
@@ -12,12 +12,12 @@
 
 }
 
-.concert:hover {
+.event:hover {
   background-color:rgba(232, 236, 241, 0.3);
   cursor: pointer;
 }
 
-.concert__header {
+.event__header {
   font-family: "Montserrat", sans-serif;
   color: #3e4852;
   font-weight: 600;
@@ -25,14 +25,11 @@
   margin-bottom: 5px;
 }
 
-.concert__copy-container {
-
+.event__date {
+  font-family: 'Courier New', monospace;
+  color: gray;
+  font-weight: 600;
+  font-size: 13px;
+  position: relative;
+  left: 2px;
 }
-input[type=checkbox] + label {
-  color: #ccc;
-  font-style: italic;
-} 
-input[type=checkbox]:checked + label {
-  color: #f00;
-  font-style: normal;
-} 
