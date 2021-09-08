@@ -1,12 +1,38 @@
 .concert {
   display: flex;
-  width: 200px;
+  height: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  padding-right: 20px;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  border-left: 1px solid gray;
+
+}
+
+.concert:hover {
+  background-color:rgba(232, 236, 241, 0.3);
+  cursor: pointer;
 }
 
 .concert__header {
   font-family: "Montserrat", sans-serif;
+  color: #3e4852;
+  font-weight: 600;
   margin: 0;
+  margin-bottom: 5px;
 }
+
+.concert__copy-container {
+
+}
+input[type=checkbox] + label {
+  color: #ccc;
+  font-style: italic;
+} 
+input[type=checkbox]:checked + label {
+  color: #f00;
+  font-style: normal;
+} 

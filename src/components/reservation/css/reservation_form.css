@@ -5,17 +5,44 @@
   border-radius: 20px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   background-color: white;
+  padding: 50px;
 }
+
+
+.reservation-form__rectangle {
+  background-color: #403ef7;
+  width: 15px;
+  height: 15px;
+  margin-right: 15px;
+  border-radius: 5px;;
+}
+
+.reservation-form__logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+
+}
+
+.reservation-form__company-name {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
 
 @media (min-width: 450px) {
   .reservation-form {
-    width: 350px;
+    width: 375px;
     height: 450px;
   }
 }
 
 .reservation-form__header {
   font-family: 'Montserrat', sans-serif;
-  letter-spacing: 2px;
+  color: #3e4852;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
 }
 

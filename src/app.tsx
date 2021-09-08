@@ -9,7 +9,6 @@ function App() {
   return (
     <div className="app-container">
       <div className="forms-container">
-        TicketBeast
         <ReservationForm setReservation={setReservation} />
         {showPaymentForm && (
           <PaymentForm

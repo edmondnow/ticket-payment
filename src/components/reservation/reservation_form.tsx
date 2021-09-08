@@ -9,13 +9,11 @@ import {
 import "./css/reservation_form.css";
 
 export type ReservationType = {
-    status: string;
-    id: string;
-    concertId: string;
-    lastUpdated: string;
-  };
-
-
+  status: string;
+  id: string;
+  concertId: string;
+  lastUpdated: string;
+};
 
 interface ReservationFormProps {
   setReservation: (args: ReservationType) => void;
@@ -43,7 +41,13 @@ export const ReservationForm: FC<ReservationFormProps> = ({
   const onClick = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const reservationId = uuidv4();
-    postReservation(selectedConcert!.id, reservationId, setReservationIdOnPost, identification!, numberOfTickets);
+    postReservation(
+      selectedConcert!.id,
+      reservationId,
+      setReservationIdOnPost,
+      identification!,
+      numberOfTickets
+    );
   };
 
   const handleSelectChange = (value: string) => {
@@ -53,8 +57,16 @@ export const ReservationForm: FC<ReservationFormProps> = ({
   };
 
   return (
-    <form name="reservation-form" className="reservation-form" onSubmit={onClick}>
-      <h2 className="reservation-form__header">Select concert</h2>
+    <form
+      name="reservation-form"
+      className="reservation-form"
+      onSubmit={onClick}
+    >
+      <div className="reservation-form__logo-container">
+        <div className="reservation-form__rectangle" />
+        <div className="reservation-form__company-name">TicketBeast</div>
+      </div>
+      <h2 className="reservation-form__header">Select the event you want to reserve</h2>
       {concerts &&
         concerts.map((concert, key) => {
           const isSelected = concert.id === selectedConcert?.id;
